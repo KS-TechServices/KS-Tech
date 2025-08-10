@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KS Tech Services</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: purple;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        border: 3px solid white;
+        font-size: 2.2em;
+        font-weight: bold;
+    }
+    main {
+        flex: 1;
+        padding: 20px;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 40px;
+        line-height: 1.8;
+    }
+    .contact-btn {
+        display: block;
+        margin: 30px auto;
+        padding: 12px 25px;
+        background-color: white;
+        color: purple;
+        border: none;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .contact-btn:hover {
+        background-color: #f2f2f2;
+    }
+    footer {
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+    }
+    /* Contact form popup styles */
+    .contact-form {
+        display: none;
+        position: fixed;
+        bottom: 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        margin: 8px 0;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .contact-form button {
+        background: purple;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<header>KS Tech Services</header>
+
+<main>
+    <p>We provide fast, reliable and affordable tech solutions for all your needs:</p>
+    <ul>
+        <li>Computer repair & troubleshooting</li>
+        <li>Software installation</li>
+        <li>Smartphone solutions (pattern removal, fingerprint, network unlock)</li>
+        <li>Cyber services (iTax, eCitizen, TIMS, TSC)</li>
+        <li>Visa applications</li>
+        <li>Wedding recording</li>
+        <li>Graphic design services</li>
+    </ul>
+
+    <button class="contact-btn" onclick="toggleForm()">Contact Us</button>
+</main>
+
+<div class="contact-form" id="contactForm">
+    <h3>Contact Us</h3>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" value="karieson92@gmail.com" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<footer>
+    © 2025 KS Tech Services. All Rights Reserved.
+</footer>
+
+<script>
+    function toggleForm() {
+        const form = document.getElementById('contactForm');
+        form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+</body>
+</html>
